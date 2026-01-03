@@ -486,9 +486,24 @@
     },
     "3.3.7": {
       "postgresql": [
-        "17"
+        "15"
       ],
       "hash": "sha256-UHJKDd5JrcJT5Z4CTYsY/va+ToU0GUPG1eHhuXTkP84="
+    },
+    "3.6.1": {
+      "postgresql": [
+        "17"
+      ],
+      "hash": "sha256-7Az6q0dWMBBiEdGA1x30Z4LkHhC23/6R15yoGOzSy7Q="
+    }
+  },
+  "h3": {
+    "4.2.3": {
+      "postgresql": [
+        "15",
+        "17"
+      ],
+      "hash": "sha256-kTh0Y0C2pNB5Ul1rp77ets/5VeU1zw1WasGHkOaDMh8="
     }
   },
   "rum": {

@@ -44,6 +44,7 @@
         ../ext/wrappers/default.nix
         ../ext/supautils.nix
         ../ext/plv8
+        ../ext/h3.nix
       ];
 
       #Where we import and build the orioledb extension, we add on our custom extensions

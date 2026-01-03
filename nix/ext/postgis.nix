@@ -106,6 +106,15 @@ let
             "raster/scripts/python/Makefile";
         mkdir -p $out/bin
         ln -s ${postgresql}/bin/postgres $out/bin/postgres
+
+        # For PostGIS 3.6+, disable the install-extension-upgrades-from-known-versions target
+        # which tries to write to the read-only PostgreSQL share directory
+        if [ -f "GNUmakefile" ]; then
+          sed -i 's|install-extension-upgrades-from-known-versions||g' GNUmakefile
+        fi
+        if [ -f "extensions/Makefile" ]; then
+          sed -i 's|install-extension-upgrades-from-known-versions||g' extensions/Makefile
+        fi
       '';
 
       postInstall = ''

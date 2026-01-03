@@ -1,11 +1,12 @@
 # syntax=docker/dockerfile:1.6
-ARG postgresql_major=17-orioledb
+ARG postgresql_major=17
 ARG postgresql_release=${postgresql_major}.1
 
-# Bump default build arg to build a package from source
-# Bump vars.yml to specify runtime package version
+# Legacy ARG variables - extensions are now managed via Nix build system
+# See nix/ext/versions.json for actual extension versions
 ARG sfcgal_release=1.3.10
-ARG postgis_release=3.3.2
+ARG postgis_release=3.6.1
+ARG h3_release=4.2.3
 ARG pgrouting_release=3.4.1
 ARG pgtap_release=1.2.0
 ARG pg_cron_release=1.6.2

@@ -99,7 +99,7 @@
           extensionsToUse =
             if (builtins.elem version [ "orioledb-17" ]) then
               orioledbExtensions
-            else if (builtins.elem version [ "17" ]) then
+            else if (builtins.elem version [ "17" "18" ]) then
               dbExtensions17
             else
               ourExtensions;
@@ -179,6 +179,7 @@
       basePackages = {
         psql_15 = makePostgres "15";
         psql_17 = makePostgres "17";
+        psql_18 = makePostgres "18";
         psql_orioledb-17 = makePostgres "orioledb-17";
       };
       binPackages = lib.mapAttrs' (name: value: {
